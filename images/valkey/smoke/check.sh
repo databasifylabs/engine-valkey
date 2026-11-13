@@ -8,5 +8,5 @@ databasify ctl is-active --quiet server.service
 databasify ctl logs -u server -n 3
 valkey-sentinel --version
 redis-shake --version 2>&1 | sed -n 1p
-echo "valkey $DATABASIFY_RELEASE answered through the wrapper"
+echo "valkey $DATABASIFY_RELEASE runs under the databasify supervisor"
 [ "$(id -u valkey)" = 64999 ] && [ "$(id -g valkey)" = 64999 ]
